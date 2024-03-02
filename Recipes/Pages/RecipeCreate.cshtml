@@ -1,0 +1,30 @@
+﻿@page
+@model Recipes.Pages.RecipeCreateModel
+@{
+}
+
+<form asp-page="RecipePage" asp-page-handler="OnPost">
+    <input asp-for="BindingModel.Name" />
+    <input asp-for="BindingModel.Discription" />
+    <input asp-for="BindingModel.CookingMinutesTime" />
+    <div id="steps">
+        <textarea asp-for="BindingModel.Steps"></textarea>
+        @* <div class="step">
+            <textarea>
+        </div>
+        <script>
+            document.getElementById("generateButton").addEventListener("click", function () {
+                var htmlCode = '<div>Новый элемент HTML</div>';
+
+                // Получаем ссылку на целевой div
+                var targetDiv = document.getElementById("steps");
+
+                targetDiv.innerHTML = htmlCode;
+            });
+
+        </script>
+        <button id="generateButton">Step add</button> *@
+    </div>
+    <input id="submitInput" type="submit" />
+    <select for="submitInput">Submit Form</select>
+</form>
